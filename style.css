@@ -1,0 +1,165 @@
+/* Estilos Generales */
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f7f6;
+    color: #333;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    text-align: center;
+}
+
+.container {
+    background-color: #ffffff;
+    padding: 30px 40px;
+    border-radius: 10px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+    width: 90%;
+    max-width: 450px;
+}
+
+h1 {
+    color: #2c3e50;
+    margin-bottom: 20px;
+    font-size: 2em;
+}
+
+p {
+    color: #555;
+    line-height: 1.6;
+    margin-bottom: 20px;
+}
+
+/* Estilos para la página de acceso (index.html) */
+input[type="password"] {
+    width: calc(100% - 22px); /* Ajuste para padding y borde */
+    padding: 12px;
+    margin-bottom: 20px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    box-sizing: border-box;
+    font-size: 1em;
+}
+
+input[type="password"]:focus {
+    border-color: #3498db;
+    outline: none;
+    box-shadow: 0 0 5px rgba(52, 152, 219, 0.5);
+}
+
+button, .back-button {
+    background-color: #3498db;
+    color: white;
+    border: none;
+    padding: 12px 20px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 1em;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+button:hover, .back-button:hover {
+    background-color: #2980b9;
+}
+
+.error-message {
+    color: #e74c3c;
+    margin-top: 10px;
+    font-size: 0.9em;
+    min-height: 1.2em; /* Para evitar saltos de layout */
+}
+
+/* Estilos para la página de video (video.html) */
+.video-container h1 {
+    margin-bottom: 30px;
+}
+
+.responsive-video {
+    position: relative;
+    padding-bottom: 56.25%; /* Proporción 16:9 */
+    height: 0;
+    overflow: hidden;
+    margin-bottom: 20px;
+    border-radius: 8px; /* Bordes redondeados para el contenedor del video */
+}
+
+.responsive-video iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    border: none; /* Quitar borde del iframe si existe */
+}
+
+.back-button {
+    display: block;
+    width: fit-content;
+    margin: 20px auto 0;
+}
+
+/* Responsividad */
+@media (max-width: 600px) {
+    .container {
+        padding: 20px;
+        margin: 20px;
+    }
+
+    h1 {
+        font-size: 1.8em;
+    }
+
+    input[type="password"],
+    button,
+    .back-button {
+        font-size: 0.9em;
+    }
+}
+
+/* Estilos para el tema de Cumpleaños (video.html) */
+body.birthday-theme {
+    /* Fondo festivo: un degradado de colores azules/verdes */
+    background: linear-gradient(135deg, #2c3e50 0%, #3498db 70%, #2ecc71 100%);
+    /* background: linear-gradient(135deg, #3a6073 0%, #16222a 100%); */ /* Opción más oscura */
+}
+
+.birthday-theme .container {
+    background-color: #f8f9fa; /* Un gris muy claro, casi blanco */
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.2);
+}
+
+.birthday-theme h1 {
+    font-family: 'Pacifico', cursive; /* Manteniendo por ahora, se puede cambiar */
+    color: #2c3e50; /* Azul oscuro principal */
+    text-shadow: 1px 1px 2px rgba(0,0,0,0.1);
+    font-size: 2.8em;
+}
+
+.birthday-theme .responsive-video {
+    border: 5px solid #3498db; /* Borde azul */
+    box-shadow: 0 0 15px rgba(52, 152, 219, 0.4);
+}
+
+.birthday-theme .back-button {
+    background-color: #27ae60; /* Verde */
+    font-weight: bold;
+}
+
+.birthday-theme .back-button:hover {
+    background-color: #229954; /* Verde más oscuro al pasar el mouse */
+}
+
+/* Importar fuente Pacifico (opcional, si quieres usarla) */
+@import url('https://fonts.googleapis.com/css2?family=Pacifico&display=swap');
+
+/* Asegúrate que esta importación esté al principio del archivo CSS si decides usarla,
+   o que no haya otras reglas @import después de reglas de estilo normales. 
+   Sin embargo, dado que estoy editando, la colocaré al final para añadirla.
+   Lo ideal es que @import vaya al inicio del fichero CSS.
+*/ 

@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>¡Sorpresa!</title>
+    <link rel="stylesheet" href="style.css">
+    <style>
+        /* Estilos adicionales para el canvas del confeti */
+        #confettiCanvas {
+            position: fixed; /* O absolute, dependiendo del scroll */
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            z-index: 1000; /* Asegura que esté por encima de otros elementos */
+            pointer-events: none; /* Para que no interfiera con los clics */
+        }
+    </style>
+</head>
+<body class="birthday-theme">
+    <canvas id="confettiCanvas"></canvas>
+    <div class="container video-container">
+        <h1>¡Feliz Cumpleaños! 🎉</h1>
+        <div class="responsive-video">
+            <!-- Puedes reemplazar esto con el código de inserción de tu video -->
+            <iframe 
+                width="560" 
+                height="315" 
+                src="https://www.youtube.com/embed/dQw4w9WgXcQ" 
+                title="YouTube video player" 
+                frameborder="0" 
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
+                referrerpolicy="strict-origin-when-cross-origin" 
+                allowfullscreen>
+            </iframe>
+        </div>
+        <a href="index.html" class="back-button">Volver</a>
+    </div>
+    <script src="confetti.js"></script>
+</body>
+</html> 
